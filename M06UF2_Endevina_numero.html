@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+         <meta charset="UTF-8">
+        <title>TODO supply a title</title>
+         <script src="js/joc2.js"></script>
+        <link rel="stylesheet" type="text/css" href="estil_endevina.css">
+
+    </head>
+    <body background="image/paisatge.jpg">
+        <h1 align="center">Clica un dels dos botons per començar a jugar</h1>
+        <p id="demo"></p>
+        <div align="center"> <img src="image/tigre.jpg" width="250px" height="250px" align="center"><br>
+    <button id="endevinarnummeu" type="button" onclick="numeroMeu.endevinarnumeromeu()" align="center">Endevina el número que penso</button>
+    <button id="endevinarmaquina" type="button" onclick="numeroMaquina.endevinarnumeromaquina()"  align="center">Endevinem el número que                penses</button>
+              
+            <div id="dificultat_maquina" hidden><p>Escull el nivell de dificultat</p>
+            <input id="facil2" type="radio" name="10" value="10" onclick="numeroMaquina.dificultatjoc_maquina()">
+            <input id="mitja2" type="radio" name="10" value="50" onclick="numeroMaquina.dificultatjoc_maquina()">
+            <input id="dificil2"type="radio" name="10" value="100" onclick="numeroMaquina.dificultatjoc_maquina()">
+            <p>De 0 a 10 || De 0 a 50 ||  De 0 a 100</p>
+            </div>
+            
+        <!--La maquina endevina el nostre-->
+        <p><button id="gran" type="button" onclick="numeroMeu.mesgran()" align="center" hidden>Més gran</button>
+        <button id="petit" type="button" onclick="numeroMeu.mespetit()" align="center" hidden>Més petit</button></p>
+        <p id="missatge1" hidden></p>
+        <button id="encertat" type="button" onclick="numeroMeu.encertat()" align="center" hidden>Has encertat!</button>
+        <p id="missatgeencertat" onclick="numeroMeu.encertat()" hidden></p>
+            
+        <!--Endevinem el de la maquina-->
+        <input id="intronumero" type="text" placeholder="Introdueix numero"  align="center" hidden>
+        <button id="verifica" type="button" onclick="numeroMaquina.endevinarnumeromaquina()" align="center" hidden>Verifica</button>
+        <p id="missatge" hidden></p>
+        <img id="gifaplaudiment" src="image/aplaudiment.gif" hidden>
+        <img id="imatge_tigre" src="image/tigre_pensant.jpg" hidden>
+        <img id="img_gat" src="image/gat_enfadat.jpg" hidden>
+        <img id="gif_gat_content" src="image/gat_content.gif" hidden></div>
+     
+    </body>
+</html>
