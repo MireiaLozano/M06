@@ -44,11 +44,6 @@ class EndevinaMeu extends Juego{
         document.getElementById("missatge1").innerHTML= "El número que estàs pensant és el " +this.mostra+ " ?";
         this.numerotorns++;
     }
-       /* Això és per si fan trampes i ens volen marejar, però si ho afegim el code deixa de funcionar o no va el missatge d'error
-       
-       else if (this.numeromaxim == this.numerominim && this.numerominim == this.numeromaxim) {
-            document.getElementById("missatge1").innerHTML = "Ep! No em maregis, pensa un número va";
-        }*/
     
 }
     mesgran(){
