@@ -1,0 +1,2 @@
+Estàs jugant a endevinar el teu número, endavant!
+  

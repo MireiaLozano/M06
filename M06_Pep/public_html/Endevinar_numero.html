@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Joc d'endevinar</title>
+        <script src="js/joc3.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("#titol_crono").on({
+                mouseenter: function(){
+                    $(this).animate({opacity: '0.5'});
+                },
+                mouseleave: function(){
+                     $(this).animate({opacity: '1'});
+                }
+            });
+            $("#data").on({
+                mouseenter: function(){
+                    $(this).animate({opacity: '0.5'});
+                },
+                mouseleave: function(){
+                     $(this).animate({opacity: '1'});
+                }
+           });
+            $("#titol_joc").on({
+                mouseenter: function(){
+                    $(this).animate({opacity: '0.5'});
+                },
+                mouseleave: function(){
+                     $(this).animate({opacity: '1'});
+                }
+            });
+            $("#foto_principal").on({
+                mouseenter: function(){
+                    $(this).animate({opacity: '0.5'});
+                },
+                mouseleave: function(){
+                     $(this).animate({opacity: '1'});
+                }
+            });
+                $("#endevinarnummeu").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+                }
+        });
+                $("#endevinarmaquina").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+                }
+        });
+               $("#pista_10").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+                }
+        });
+               $("#pista_50").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+                }
+        });
+               $("#pista_100").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+                }
+        });     
+                $("#refrescar").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+                }
+       });
+             $("#gran").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+                }
+       });
+             $("#petit").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+                }
+      });
+             $("#encertat").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+            }
+      });
+             $("#verifica").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", 'aqua');
+                }
+    });
+            $("#endevinarnummeu").click(function(){
+                var foto = $("#foto_principal");
+                    foto.animate({height: '300px', opacity: '0.4'}, "slow");
+                    foto.animate({width: '300px', opacity: '0.8'}, "slow");
+                    foto.animate({height: '200px', opacity: '0.4'}, "slow");
+                    foto.animate({width: '200px', opacity: '0.8'}, "slow");
+            });
+            $("#endevinarmaquina").click(function(){
+                var foto = $("#foto_principal");
+                    foto.animate({height: '300px', opacity: '0.4'}, "slow");
+                    foto.animate({width: '300px', opacity: '0.8'}, "slow");
+                    foto.animate({height: '200px', opacity: '0.4'}, "slow");
+                    foto.animate({width: '200px', opacity: '0.8'}, "slow");
+            });
+});
+
+        </script>       
+        <link rel="stylesheet" type="text/css" href="estil_endevina.css">
+
+    </head>
+    <body onload="utils.iniciar_crono()" background="image/paisatge.jpg" id="cos">
+        <div id="data" align="center"><script>document.write(new Date().toLocaleDateString());</script></div>
+        <div align="center"><h1 id="titol_crono">Portes <span id="crono">00:00:00</span> jugant</h1></div>
+        <h1 id="titol_joc" align="center">Clica un dels dos botons per començar a jugar</h1> 
+        <div align="center"> <img id="foto_principal" src="image/tigre.jpg" width="250px" height="250px" align="center"><br>
+    <button id="endevinarnummeu" type="button" onclick="numeroMeu.endevinarnumeromeu()" align="center">Endevina el número que penso</button>
+    <button id="endevinarmaquina" type="button" onclick="numeroMaquina.endevinarnumeromaquina()"  align="center">Endevinem el número que      penses</button>
+    <p id="missatge_inici_meu"></p>
+    <p id="missatge_inici_maq"></p>
+    <button id="pista_10" type="button" onclick="utils.pista10()" align="center" hidden>Clica per llegir una pista</button>
+    <button id="pista_50" type="button" onclick="utils.pista50()" align="center" hidden>Clica per llegir una pista</button>
+    <button id="pista_100" type="button" onclick="utils.pista100()" align="center" hidden>Clica per llegir una pista</button>
+    <button id="refrescar" onclick="utils.refrescar_joc()" hidden>Tornar a jugar</button>
+    <div id="temps_restant1"><h2 id="temps_resta"></h2></div>
+            <div id="dificultat_maquina" hidden><p>Escull el nivell de dificultat</p>
+            <input id="facil2" type="radio" name="10" value="10" onclick="numeroMaquina.dificultatjoc_maquina()">
+            <input id="mitja2" type="radio" name="10" value="50" onclick="numeroMaquina.dificultatjoc_maquina()">
+            <input id="dificil2"type="radio" name="10" value="100" onclick="numeroMaquina.dificultatjoc_maquina()">
+            <p>De 0 a 10 || De 0 a 50 ||  De 0 a 100</p>
+            </div>
+            <!--/////////////-->
+            <div id="dificultat_meu" hidden><p>Escull el nivell de dificultat</p>
+            <input id="facil1" type="radio" name="10" value="10" onclick="numeroMeu.dificultatjoc_meu()">
+            <input id="mitja1" type="radio" name="10" value="50" onclick="numeroMeu.dificultatjoc_meu()">
+            <input id="dificil1"type="radio" name="10" value="100" onclick="numeroMeu.dificultatjoc_meu()">
+            <p>De 0 a 10 || De 0 a 50 ||  De 0 a 100</p>
+            </div>
+            
+        <!--La maquina endevina el nostre-->
+        <p><button id="gran" type="button" onclick="numeroMeu.mesgran()" align="center" hidden>Més gran</button>
+        <button id="petit" type="button" onclick="numeroMeu.mespetit()" align="center" hidden>Més petit</button></p>
+        <p id="missatge1" hidden></p>
+        <button id="encertat" type="button" onclick="numeroMeu.encertat()" align="center" hidden>Has encertat!</button>
+        <p id="missatgeencertat" onclick="numeroMeu.encertat()" hidden></p>
+            
+        <!--Endevinem el de la maquina-->
+        <input id="intronumero" type="text" placeholder="Introdueix numero"  align="center" hidden>
+        <button id="verifica" type="button" onclick="numeroMaquina.endevinarnumeromaquina()" align="center" hidden>Verifica</button>
+        <p id="missatge" hidden></p>
+        <p id="missatge_encertat_maquina" hidden></p>
+        <!--Gifs-->
+        <img id="gifaplaudiment" src="image/aplaudiment.gif" hidden>
+        <img id="imatge_tigre" src="image/tigre_pensant.jpg" hidden>
+        <img id="img_gat" src="image/gat_enfadat.jpg" hidden>
+        <img id="gif_gat_content" src="image/gat_content.gif" hidden></div>
+        <div id="div_missatge_intents" align="center"><p id="missatge_intents" hidden></p></div>
+     
+    </body>
+</html>

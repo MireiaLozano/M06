@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+h1{
+    font-family: 'Londrina Solid', cursive;
+}
+#data{
+    font-family: 'Lobster', cursive;
+    font-size: 26px;
+    color: transparent;
+    background: linear-gradient(black,blue);
+    -webkit-background-clip: text;
+}
+#titol_crono{
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: transparent;
+    background: linear-gradient(black,blue);
+    -webkit-background-clip: text;
+}
+#crono{
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: transparent;
+    background: linear-gradient(black,blue);
+    -webkit-background-clip: text;
+}
+#cos{
+    background-attachment: fixed;
+}
+
+#endevinarnummeu{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#endevinarmaquina{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#missatge_inici_meu{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
+}
+#missatge_inici_maq{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
+}
+#pista_10{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#pista_50{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#pista_100{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#dificultat_meu{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
+    border-radius: 100px;
+}
+#dificultat_maquina{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
+    border-radius: 100px;
+}
+#facil{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
+}
+#mitja{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
+}
+#dificil{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
+}
+#gran{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#petit{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#encertat{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#verifica{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#encertat{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+}
+#refrescar{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    border-radius: 100px;
+    background-color: aqua;
+}
+#missatge1{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 26px;
+}
+
+#missatge{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 16px;
+    
+}
+#missatgeencertat{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: transparent;
+    background: linear-gradient(black,blue);
+    -webkit-background-clip: text;
+}
+#missatge_encertat_maquina{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: transparent;
+    background: linear-gradient(black,blue);
+    -webkit-background-clip: text;
+}
+#missatge_intents{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(black,blue);
+    -webkit-background-clip: text;
+}
+#imatge_tigre{
+    width: 20%;
+    height: 20%;
+}
+#img_gat{
+    width: 20%;
+    height: 20%;
+}
+

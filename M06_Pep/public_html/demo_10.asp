@@ -1,0 +1,1 @@
+El joc anirà del 0 al 10, tens 10 segons per jugar
