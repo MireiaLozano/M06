@@ -18,12 +18,16 @@ class Juego {
         $("#gran").attr("disabled", true);
         $("#petit").attr("disabled", true);
         $("#encertat").attr("disabled", true);
+        
         //Coses endevina maquina
+        $("#endevinarmaquina").attr("disabled", true);
         $("#missatge").hide();
         $("#dificultat_maquina").hide();
         $("#intronumero").hide();
         $("#verifica").hide();
+        
         //Coses endevina meu
+        $("#endevinarnummeu").attr("disabled", true);
         $("#dificultat_meu").hide();
         $("#missatge1").hide();
         $("#pista_10").attr("disabled", true);
@@ -79,6 +83,14 @@ class Utils{
     }
     }
      pista10() {
+        $("#pista_10").load("pista10.html", function(responseTxt, statusTxt, xhr){
+                if(statusTxt == "success")
+                    alert("Pista per joc fàcil carregada correctament!");
+                if(statusTxt == "error")
+                    alert("Error: " + xhr.status + ": " + xhr.statusText);
+            });
+    }
+    /*
         var arxiu;
         if (window.XMLHttpRequest) {
         arxiu = new XMLHttpRequest();
@@ -90,8 +102,17 @@ class Utils{
     };
     arxiu.open('GET', 'pista10.html', true);
     arxiu.send();
-}
+} 
+*/
      pista50() {
+         $("#pista_50").load("pista50.html", function(responseTxt, statusTxt, xhr){
+                if(statusTxt == "success")
+                    alert("Pista per joc fàcil carregada correctament!");
+                if(statusTxt == "error")
+                    alert("Error: " + xhr.status + ": " + xhr.statusText);
+            });
+      }
+    /*
         var arxiu;
         if (window.XMLHttpRequest) {
         arxiu = new XMLHttpRequest();
@@ -104,7 +125,16 @@ class Utils{
     arxiu.open('GET', 'pista50.html', true);
     arxiu.send();
 }
+*/
      pista100() {
+         $("#pista_100").load("pista100.html", function(responseTxt, statusTxt, xhr){
+                if(statusTxt == "success")
+                    alert("Pista per joc fàcil carregada correctament!");
+                if(statusTxt == "error")
+                    alert("Error: " + xhr.status + ": " + xhr.statusText);
+            });
+     }
+    /*
         var arxiu;
         if (window.XMLHttpRequest) {
         arxiu = new XMLHttpRequest();
@@ -116,8 +146,10 @@ class Utils{
     };
     arxiu.open('GET', 'pista100.html', true);
     arxiu.send();
- }  
+ } 
+*/
 }
+
     const utils = new Utils();
     setInterval("utils.iniciar_crono()", 1000)
 
@@ -147,9 +179,9 @@ class EndevinaMeu extends Juego{
             });
             this.numeromaxim=10;
             this.numero = Math.floor((Math.random()*this.numeromaxim)+1);
-            utils.temps_restant=10;
+            utils.temps_restant=15;
             utils.interval = setInterval('utils.compte_enrere()', 1000);
-            setTimeout(this.temps_acabat, 10000);
+            setTimeout(this.temps_acabat, 15000);
             $("#pista_10").show();
             $("#refrescar").show();
             $("#missatge_inici_meu").hide();
@@ -160,9 +192,9 @@ class EndevinaMeu extends Juego{
             });
             this.numeromaxim=50;
             this.numero = Math.floor((Math.random()*this.numeromaxim)+1);
-            utils.temps_restant=15;
+            utils.temps_restant=20;
             utils.interval = setInterval('utils.compte_enrere()', 1000);
-            setTimeout(this.temps_acabat, 15000);
+            setTimeout(this.temps_acabat, 20000);
             $("#pista_50").show("block");
             $("#refrescar").show("inline");
             $("#missatge_inici_meu").hide();
@@ -171,10 +203,11 @@ class EndevinaMeu extends Juego{
             $.get("demo_100.asp", function(data){
                 alert("Info: " + data);
             });
+            this.numeromaxim=100;
             this.numero = Math.floor((Math.random()*this.numeromaxim)+1);
-            utils.temps_restant=20;
+            utils.temps_restant=25;
             utils.interval = setInterval('utils.compte_enrere()', 1000);
-            setTimeout(this.temps_acabat, 20000);
+            setTimeout(this.temps_acabat, 25000);
             $("#pista_100").show("block");
             $("#refrescar").show("inline");
             $("#missatge_inici_meu").hide();
@@ -197,6 +230,7 @@ class EndevinaMeu extends Juego{
     $("#missatge1").show();
     $("#missatgeencertat").show();
     $("#missatge_inici_meu").load("missatge_inici_meu.txt");
+    
    
      this.mostra=parseInt(this.numero);
     
@@ -233,13 +267,14 @@ class EndevinaMeu extends Juego{
     numeroMeu.endevinarnumeromeu();
 }
     encertat() {
+    $("#gif_meu_garfield").hide();
+    $("#gif_gat_content").show("slow");
     $("#missatge_inici_meu").hide();
     $("#dificultat_meu").hide();
     $("#pista_10").hide();
     $("#pista_10").hide();
     $("#pista_10").hide();
     $("#missatgeencertat").text("He encertat!! Ha sigut en " + this.numerotorns + " torns");
-    $("#gif_gat_content").show("slow");
     clearInterval(utils.interval);
     $("#temps_resta").text("Has encertat! S'acabat la partida");
     joc.temps_acabat();
@@ -274,9 +309,9 @@ class EndevinaMaquina extends Juego{
             });
             this.numeromaxim=10;
             this.numero = Math.floor((Math.random()*this.numeromaxim)+1);
-            utils.temps_restant=10;
+            utils.temps_restant=15;
             utils.interval = setInterval('utils.compte_enrere()', 1000);
-            setTimeout(this.temps_acabat, 10000);
+            setTimeout(this.temps_acabat, 15000);
             $("#pista_10").show();
             $("#refrescar").show();
             $("#missatge_inici_maq").hide();
@@ -287,9 +322,9 @@ class EndevinaMaquina extends Juego{
             });
             this.numeromaxim=50;
             this.numero = Math.floor((Math.random()*this.numeromaxim)+1);
-            utils.temps_restant=15;
+            utils.temps_restant=20;
             utils.interval = setInterval('utils.compte_enrere()', 1000);
-            setTimeout(this.temps_acabat, 15000);
+            setTimeout(this.temps_acabat, 20000);
             $("#pista_50").show();
             $("#refrescar").show();
             $("#missatge_inici_maq").hide();
@@ -300,9 +335,9 @@ class EndevinaMaquina extends Juego{
             });
             this.numeromaxim=100;
             this.numero = Math.floor((Math.random()*this.numeromaxim)+1);
-            utils.temps_restant=20;
+            utils.temps_restant=25;
             utils.interval = setInterval('utils.compte_enrere()', 1000);
-            setTimeout(this.temps_acabat, 20000);
+            setTimeout(this.temps_acabat, 25000);
             $("#pista_100").show();
             $("#refrescar").show();
             $("#missatge_inici_maq").hide();
@@ -349,6 +384,7 @@ class EndevinaMaquina extends Juego{
         //Per netejar l'interval
         clearInterval(utils.interval);
         $("#temps_resta").text("Has encertat! S'acabat la partida");
+        
         //Perque els botons es desconnectin
         joc.temps_acabat();
         $("#missatge_encertat_maquina").text("Wow, l'has encertat, quin crack!! Només t'ha portat " +this.numerotorns+ " torns");
@@ -363,7 +399,8 @@ class EndevinaMaquina extends Juego{
         $("#verifica").hide();
         $("#dificultat_maquina").hide();
         $("#missatge_inici_maq").hide();
-        $("#gifaplaudiment").show("block");
+        $("#gif_maq_garfield").hide();
+        $("#gifaplaudiment").show("slow");
     }
         
         /*Aquest és el code d'errors per si posen una lletra, un número negatiu o pasen el límit del màxim, 
